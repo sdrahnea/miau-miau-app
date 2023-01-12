@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.awt.*;
 import java.util.Random;
@@ -13,7 +12,6 @@ import java.util.Random;
 /**
  * Created by sdrahnea
  */
-@EnableSwagger2
 @EnableAutoConfiguration
 @SpringBootApplication
 @EnableJpaRepositories
@@ -25,7 +23,7 @@ public class MiuaMiuaApplication {
     public static final int MAX_Y = 400;
 
     public static void main(String[] args) throws AWTException, InterruptedException {
-        System.setProperty("java.net.headless", "false");
+        System.setProperty("java.awt.headless", "false");
 
         SpringApplication.run(MiuaMiuaApplication.class, args);
 
