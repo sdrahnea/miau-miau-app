@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.miau</groupId>
-    <artifactId>holiday-management-system</artifactId>
+    <artifactId>miau-miau-app</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
