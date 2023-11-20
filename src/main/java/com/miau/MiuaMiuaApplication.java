@@ -28,8 +28,21 @@ public class MiuaMiuaApplication {
         Robot robot = new Robot();
         Random random = new Random();
 
+        int lastX = 0;
+        int lastY = 0;
+
         while (true) {
-            robot.mouseMove(random.nextInt(MAX_X), random.nextInt(MAX_Y));
+            Point currentPoint = MouseInfo.getPointerInfo().getLocation();
+
+            int currentX = Double.valueOf(currentPoint.getX()).intValue();
+            int currentY = Double.valueOf(currentPoint.getY()).intValue();
+
+            if(lastX == currentX && lastY == currentY) {
+                robot.mouseMove(random.nextInt(MAX_X), random.nextInt(MAX_Y));
+            }
+
+            lastX = currentX;
+            lastY = currentY;
             Thread.sleep(INTERVAL);
         }
     }
